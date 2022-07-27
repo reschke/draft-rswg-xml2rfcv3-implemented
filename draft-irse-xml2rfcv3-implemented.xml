@@ -48,7 +48,8 @@ Notes for the author:
   
   <abstract>
     <t>
-       This document describes the "xml2rfc" version 3 vocabulary as implemented in xml2rfc tools.
+       This document describes the "xml2rfc" version 3 vocabulary as implemented in xml2rfc tools
+       at the time of publication.
     </t>
   </abstract>
 
@@ -72,7 +73,7 @@ Notes for the author:
   <middle>
 <section title="Introduction">
 <t>
-  This document describes the updated version 3 ("v3") of the "xml2rfc" vocabulary as implemented in xml2rfc tools.
+  This document describes the updated version 3 ("v3") of the "xml2rfc" vocabulary as implemented in xml2rfc tools at the time of publication.
 </t>
 <t>
 The v3 format is used as part of the new RFC Series format described in <xref target="RFC6949"/>.
