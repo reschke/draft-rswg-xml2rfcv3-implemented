@@ -1,16 +1,23 @@
 # XSLT processor of choice
 XSLT=saxon -now:$(shell date -r $< -u +%Y-%m-%dT%H:%M:%SZ)
 
+VERSION=01
+
 all: \
 	draft-irse-xml2rfcv3-implemented.redxml \
 	draft-irse-xml2rfcv3-implemented.txt \
 	xml2rfcv3-annotated.rng
+
+ship:	draft-irse-xml2rfcv3-implemented.redxml
+	rm -f draft-irse-xml2rfcv3-implemented-*.xml
+	ln -sf draft-irse-xml2rfcv3-implemented.redxml draft-irse-xml2rfcv3-implemented-${VERSION}.xml
+
 #	draft-irse-xml2rfcv3-implemented.unpg.txt \
 
 allhtml: \
-	draft-irse-xml2rfcv3-implemented.redxml \
+	draft-irse-xml2rfcv3-implemented-${VERSION}.redxml \
 	xml2rfcv3-annotated.rng \
-	draft-irse-xml2rfcv3-implemented.html
+	draft-irse-xml2rfcv3-implemented-${VERSION}.html
 
 xml2rfc.all: \
 	draft-irse-xml2rfcv3-implemented.xml xml2rfcv3-annotated.rng
