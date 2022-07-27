@@ -734,7 +734,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <li>svg</li>
       </ul>
       <t>
-            The RFC Series Editor will maintain a complete list of the preferred values on the RFC Editor
+            The RFC Series Editor maintains a complete list of the preferred values on the RFC Editor
             web site, and that list is expected to be updated over time. Thus, a consumer
             of v3 XML should not cause a failure when it encounters an unexpected type or no type is specified.
             The table will also indicate which type of art can appear in plain-text output (for example, type="svg" cannot).
@@ -3894,7 +3894,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <li>yang</li>
       </ul>
       <t>
-            The RFC Series Editor will maintain a complete list of the preferred values on the RFC Editor
+            The RFC Series Editor maintains a complete list of the preferred values on the RFC Editor
             web site, and that list is expected to be updated over time. Thus, a consumer
             of v3 XML should be prepared for an unexpected type or no type at all. 
       </t>
@@ -5776,9 +5776,6 @@ See
 the protocol overview&lt;/a&gt;
 for more information.
 </artwork>
-   <t>
-   Note that the URL in the above example might be different when the RFC Editor deploys the v3 format.
-   </t>
    <t/>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), and &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>).</t>
    <t anchor="element.relref.contents"><!--AG-->
@@ -6452,7 +6449,7 @@ Suzanne Woolf
     <seriesInfo name='RFC' value='2119'/>
   </reference>
 
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7991.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7991.xml"/>
 
   <reference anchor='XML' target='https://www.w3.org/TR/2008/REC-xml-20081126/'>
     <front>
@@ -6493,30 +6490,30 @@ Suzanne Woolf
     </front>
   </reference>
 
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2026.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2397.xml"/>
-  <!-- xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2629.xml"/   -->
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3339.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3470.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3667.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3966.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3978.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3986.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.5234.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.5378.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6068.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6266.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6838.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6949.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7303.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7322.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7669.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7749.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7841.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7996.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7997.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7998.xml"/>
-  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.8407.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2026.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2397.xml"/>
+  <!-- xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2629.xml"/   -->
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.3339.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.3470.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.3667.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.3966.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.3978.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.3986.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.5234.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.5378.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6068.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6266.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6838.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6949.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7303.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7322.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7669.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7749.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7841.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7996.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7997.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7998.xml"/>
+  <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8407.xml"/>
 
   <reference anchor="RNC" target="https://www.oasis-open.org/committees/relax-ng/compact-20021121.html">
     <front>
@@ -7034,17 +7031,17 @@ xmlns:xi="http://www.w3.org/2001/XInclude"
 as one of the attributes in the &lt;<x:ref>rfc</x:ref>&gt; element.</t>
 
 <t>The most common way to use &lt;xi:include&gt; is to pull in references
-that are already formed as XML. Currently, this can be done from xml2rfc.tools.ietf.org, but later this is
-expected to be from the RFC Editor. For example, if a document has three normative
+that are already formed as XML. This can be done from bib.ietf.org.
+For example, if a document has three normative
 references, all RFCs, the document might contain:
 </t>
 <artwork type="example">
 &lt;references&gt;
-    &lt;xi:include href="http://xml2rfc.tools.ietf.org/public/rfc/
+    &lt;xi:include href="http://bib.ietf.org/public/rfc/
        bibxml/reference.RFC.2119.xml"/&gt;
-    &lt;xi:include href="http://xml2rfc.tools.ietf.org/public/rfc/
+    &lt;xi:include href="http://bib.ietf.org/public/rfc/
        bibxml/reference.RFC.4869.xml"/&gt;
-    &lt;xi:include href="http://xml2rfc.tools.ietf.org/public/rfc/
+    &lt;xi:include href="http://bib.ietf.org/public/rfc/
        bibxml/reference.RFC.7169.xml"/&gt;
 &lt;/references&gt;
 </artwork>
