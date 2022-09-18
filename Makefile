@@ -10,14 +10,14 @@ all: \
 
 ship:	draft-irse-xml2rfcv3-implemented.redxml
 	rm -f draft-irse-xml2rfcv3-implemented-*.xml
-	ln -sf draft-irse-xml2rfcv3-implemented.redxml draft-irse-xml2rfcv3-implemented-${VERSION}.xml
+	ln -f draft-irse-xml2rfcv3-implemented.redxml draft-irse-xml2rfcv3-implemented-${VERSION}.xml
 
 #	draft-irse-xml2rfcv3-implemented.unpg.txt \
 
 allhtml: \
-	draft-irse-xml2rfcv3-implemented-${VERSION}.redxml \
+	draft-irse-xml2rfcv3-implemented.redxml \
 	xml2rfcv3-annotated.rng \
-	draft-irse-xml2rfcv3-implemented-${VERSION}.html
+	draft-irse-xml2rfcv3-implemented.html
 
 xml2rfc.all: \
 	draft-irse-xml2rfcv3-implemented.xml xml2rfcv3-annotated.rng

@@ -3350,7 +3350,12 @@ in this interesting report&lt;/a&gt;.
       <iref item="obsoletes attribute" subitem="in rfc element"/>
       <t>
             A comma-separated list of RFC numbers or
-            Internet-Draft names.
+	    Internet-Draft names.
+	    The implemenation has allowed white space around the commas, and one
+	    RFC has Unicode zero-width space characters (U+200b), to work around
+	    a line breaking problem when rendering the RFC.
+	    It would be better to disallow white space and deal with line breaks
+	    while rendering.
          </t>
       <t>
             The prep tool will parse the attribute value so that incorrect
@@ -3468,6 +3473,11 @@ in this interesting report&lt;/a&gt;.
       <t>
             A comma-separated list of RFC numbers or
             Internet-Draft names.
+	    The implemenation has allowed white space around the commas, and one
+	    RFC has Unicode zero-width space characters (U+200b), to work around
+	    a line breaking problem when rendering the RFC.
+	    It would be better to disallow white space and deal with line breaks
+	    while rendering.
          </t>
       <t>
             The prep tool will parse the attribute value so that incorrect
@@ -3910,19 +3920,19 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <iref item="stream element" primary="true"/>
    <t>
       The document stream, one of IETF, IAB, IRTF, independent, or editorial.
+      The implementation does not yet handle "editorial."
    </t>
    <t>This element appears as a child element of &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
    <t>
       Text
    </t>
+   <t>The name of the document stream.
+   </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
    <t anchor="element.stream.contents"><!--AG-->
       <xref format="none" target="grammar.stream">Content model</xref>:
     </t>
-   <t><!--AG-->
-      <cref>
-      Missing template for optional.
-    </cref>
+   <t>The stream name.
    </t>
 </section>
 <!--strong-->
@@ -5082,8 +5092,10 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <iref item="xref element" primary="true"/>
    <t>
       A reference to an anchor in this document.
+      Any element that has an anchor can be a reference target.
+      </t><t>
       Formatters that have links (such as HTML and PDF) are likely to render &lt;xref&gt; elements as internal hyperlinks.
-      This element is useful for referring to references in the "References" section, to specific sections of this
+      When referring to references in the "References" section, it can specify specific sections of this
       document, to specific figures, and so on.
       The "target" attribute is required.
    </t>
@@ -5238,7 +5250,7 @@ See &lt;a href="#overview"&gt;section above&lt;/a&gt; for an overview.
       <iref item="xref element" subitem="relative attribute"/>
       <iref item="relative attribute" subitem="in xref element"/>
       <t>
-	 Specifies a relative reference from the URI in the target reference.
+	 Specifies a relative reference to include in the URI in the target reference.
 	 This value must include whatever leading character is needed to create the relative reference;
 	 typically "#" for HTML documents.
       </t>
@@ -5250,8 +5262,9 @@ See &lt;a href="#overview"&gt;section above&lt;/a&gt; for an overview.
       <iref item="xref element" subitem="section attribute"/>
       <iref item="section attribute" subitem="in xref element"/>
       <t>
-	 Specifies a section of the target reference.
-	 If the reference is not an RFC or Internet-Draft in the v3 format,
+	 Specifies a section of the target reference, which must be an external
+	 document of some kind.
+	 If the target is not an RFC or Internet-Draft in the v3 format,
 	 and no "relative" attribute has been provided, it is an error.
       </t>
    </section>
@@ -8295,7 +8308,9 @@ include "SVG-1.2-RFC.rnc"
   }
 
 <strong anchor="grammar.stream">stream</strong><iref item="stream element"/> =
-  element stream { ("IETF" | "IAB" | "IRTF" | "independent")? }
+  element stream {
+    ("IETF" | "IAB" | "IRTF" | "independent" | "editorial")?
+  }
 
 <strong anchor="grammar.referencegroup">referencegroup</strong><iref item="referencegroup element"/> =
   element referencegroup {
@@ -9446,7 +9461,9 @@ to the v3 schema.</t>
 +     (annotation | format | refcontent | seriesInfo)*
 +   }
 + stream =
-+   element stream { ("IETF" | "IAB" | "IRTF" | "independent")? }
++   element stream {
++     ("IETF" | "IAB" | "IRTF" | "independent" | "editorial")?
++   }
 + referencegroup =
 +   element referencegroup {
 +     attribute xml:base { text }?,
