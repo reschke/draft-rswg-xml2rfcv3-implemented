@@ -510,7 +510,6 @@ the appendices for a complete description of these attributes.
    <t>
       The value ought to be either the full name or the abbreviation of one of
       the IETF areas as listed on <eref target="http://www.ietf.org/iesg/area.html"/>.
-      A list of full names and abbreviations will be kept by the RFC Series Editor.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
    <t anchor="element.area.contents"><!--AG-->
@@ -731,16 +730,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <ul>
          <li>ascii-art</li>
          <li>binary-art</li>
-         <li>call-flow</li>
-         <li>hex-dump</li>
          <li>svg</li>
       </ul>
-      <t>
-            The RFC Series Editor maintains a complete list of the preferred values on the RFC Editor
-            web site, and that list is expected to be updated over time. Thus, a consumer
-            of v3 XML should not cause a failure when it encounters an unexpected type or no type is specified.
-            The table will also indicate which type of art can appear in plain-text output (for example, type="svg" cannot).
-         </t>
    </section>
    <!--artwork/@width-->
    <section anchor="element.artwork.attribute.width" toc="exclude">
@@ -3423,6 +3414,7 @@ in this interesting report&lt;/a&gt;.
          <li>"IAB"</li>
          <li>"IRTF"</li>
          <li>"independent"</li>
+         <li>"editorial" (not yet implemented)</li>
       </ul>
    </section>
    <!--rfc/@symRefs-->
@@ -3748,6 +3740,7 @@ in this interesting report&lt;/a&gt;.
          <li>"IAB"</li>
          <li>"IRTF"</li>
          <li>"independent"</li>
+         <li>"editorial" (not yet implemented)</li>
       </ul>
    </section>
    <!--seriesInfo/@value-->
@@ -3884,32 +3877,10 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             certain values designated as preferred.
       </t>
       <t>
-            The preferred values for &lt;sourcecode&gt; types are:
-      </t>
-      <ul>
-         <li>abnf</li>
-         <li>asn.1</li>
-         <li>bash</li>
-         <li>c++</li>
-         <li>c</li>
-         <li>cbor</li>
-         <li>dtd</li>
-         <li>java</li>
-         <li>javascript</li>
-         <li>json</li>
-         <li>mib</li>
-         <li>perl</li>
-         <li>pseudocode</li>
-         <li>python</li>
-         <li>rnc</li>
-         <li>xml</li>
-         <li>yang</li>
-      </ul>
-      <t>
-            The RFC Series Editor maintains a complete list of the preferred values on the RFC Editor
-            web site, and that list is expected to be updated over time. Thus, a consumer
-            of v3 XML should be prepared for an unexpected type or no type at all. 
-      </t>
+	 The RFC Editor web site has a list of the preferred values at <eref target="https://www.rfc-editor.org/materials/sourcecode-types.txt"/>).
+	 That list is updated over time. Thus, a consumer of RFCXML should not cause a failure when it
+	 encounters an unexpected type or no type is specified.
+         </t>
    </section>
 </section>
 <!--stream-->
@@ -6915,7 +6886,7 @@ are believed to be the current values in use.</t>
 </t>
 <t>
   The values for the attribute are "IETF" (the default value),
-  "independent", "IAB", and "IRTF".
+  "independent", "IAB", "IRTF", and "editorial".
 </t>
 <t>
   Historically, this attribute did not affect the final appearance of RFCs, except for
@@ -6967,6 +6938,7 @@ are believed to be the current values in use.</t>
   <li>"IRTF": mention that there was a research group consensus (where
     the name of the research group is extracted from the &lt;<x:ref>workgroup</x:ref>&gt;
     element).</li>
+  <li>"editorial": mention RSWG and RSAB approval.</li>
 </ul>
 </section>
 
@@ -6986,7 +6958,7 @@ have descriptions of how a processing tool might create output from the element.
     values, and creates a file that is a "prepared document". The prepared document is a valid v3
     document. The prep tool is described in <xref target="RFC7998"/>.</t>
     
-    <t>The prep tool is expected to have many modes:</t>
+    <t>The prep tool was expected to have many modes, although only RFC and Draft modes are implemented:</t>
     <ul>
       <li>RFC mode -- The mode used by the RFC Editor to process the input from one of
       the RFC streams and to process XML produced during the RFC editing process.
@@ -7148,8 +7120,9 @@ always has the format "p-nnn-mmm", where "nnn" is the section number
 and "mmm" is the relative position in the section.
 For example, this would be "p-2.1.3-7" for the seventh part number in Section 2.1.3.</li>
 
-<li>"slugifiedName" always has the format "n-ttt", where "ttt" is the text of the name after
-slugification. For example, this would be "n-protocol-overview" for the name "Protocol Overview".
+<li>"slugifiedName" was supposed to have the format "n-ttt", where "ttt" is the text of the name after
+   slugification, but was implemented as "name-ttt".
+   For example, this would be "n-protocol-overview" or "name-protocol-overview" for the name "Protocol Overview".
 The actual conversions done in slugification will be specified at a later time.</li>
 
 <li>Anchors must never overlap with any of the above. The easiest way to assure that is to
@@ -9636,6 +9609,7 @@ to the v3 schema.</t>
       <li>clarify &lt;<x:ref>toc</x:ref>&gt;</li>
       <li>new name of draft, remove -bis stuff</li>
       <li>Clarify &lt;<x:ref>xref</x:ref>&gt; section subreferences.</li>
+      <li>slugifiedName implementation.</li>
   </ul>
 </section>
 </section>
