@@ -16,7 +16,7 @@ Notes for the author:
 
 - Before publication, search for "[[" to look for internal notes 
 
-==================
+======================
 
 
 ======================
@@ -29,7 +29,7 @@ Notes for the author:
 
 <rfc
     ipr="trust200902"
-    docName="draft-irse-draft-irse-xml2rfcv3-implemented-03"
+    docName="draft-rswg-draft-irse-xml2rfcv3-implemented-03"
     submissionType="IETF"
     category="info"
     xml:lang="en"
@@ -40,8 +40,12 @@ Notes for the author:
 	<front>
   <title abbrev="Xml2rfc V3 as Implemented">The "xml2rfc" version 3 Vocabulary as Implemented</title>
   <author initials="J." surname="Levine" fullname="John Levine" role="editor">
-    <organization>Temporary RFC Series Project Manager</organization>
+    <organization>Standcore</organization>
 	<address><email>john.levine@standcore.com</email></address>
+  </author>
+  <author initials="P." surname="Hoffman" fullname="Paul Hoffman" role="editor">
+    <organization>ICANN</organization>
+	<address><email>paul.hoffman@icann.org</email></address>
   </author>
 
   <date/>
@@ -3414,7 +3418,6 @@ in this interesting report&lt;/a&gt;.
          <li>"IAB"</li>
          <li>"IRTF"</li>
          <li>"independent"</li>
-         <li>"editorial" (not yet implemented)</li>
       </ul>
    </section>
    <!--rfc/@symRefs-->
@@ -3740,7 +3743,6 @@ in this interesting report&lt;/a&gt;.
          <li>"IAB"</li>
          <li>"IRTF"</li>
          <li>"independent"</li>
-         <li>"editorial" (not yet implemented)</li>
       </ul>
    </section>
    <!--seriesInfo/@value-->
@@ -3901,11 +3903,16 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    </t>
    <t>The name of the document stream.
    </t>
+   <t>The stream name.
+   </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
    <t anchor="element.stream.contents"><!--AG-->
       <xref format="none" target="grammar.stream">Content model</xref>:
     </t>
-   <t>The stream name.
+   <t><!--AG-->
+      <cref>
+      Missing template for optional.
+    </cref>
    </t>
 </section>
 <!--strong-->
@@ -5066,7 +5073,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t>
       A reference to an anchor in this document.
       Any element that has an anchor can be a reference target.
-      </t><t>
+      </t>
+   <t>
       Formatters that have links (such as HTML and PDF) are likely to render &lt;xref&gt; elements as internal hyperlinks.
       When referring to references in the "References" section, it can specify specific sections of this
       document, to specific figures, and so on.
