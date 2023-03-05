@@ -24,12 +24,12 @@ Notes for the author:
 -->
 
 <!DOCTYPE rfc [
-<!ENTITY GH "https://github.com/interim-rfc-series-project-manager/draft-irse-xml2rfcv3-implemented">
+<!ENTITY GH "https://github.com/jrlevine/draft-rswg-xml2rfcv3-implemented">
 ]>
 
 <rfc
     ipr="trust200902"
-    docName="draft-rswg-draft-irse-xml2rfcv3-implemented-03"
+    docName="draft-rswg-xml2rfcv3-implemented-00"
     submissionType="IETF"
     category="info"
     xml:lang="en"
@@ -59,10 +59,8 @@ Notes for the author:
 
   <note title="Editorial Note" removeInRFC="true">
     <t>
-       Discussion of this draft takes place on the rfc-interest@rfc-editor.org
-       and rswg@rfc-editor.org
-      mailing lists, which has theur home pages at
-      <eref target="https://www.ietf.org/mailman/listinfo/rfc-interest"/> and
+      Discussion of this draft takes place on the rswg@rfc-editor.org
+      mailing list, which has its home pags at
       <eref target="https://www.ietf.org/mailman/listinfo/rswg"/>.
     </t>
     <t>
