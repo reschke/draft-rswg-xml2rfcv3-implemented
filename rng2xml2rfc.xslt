@@ -340,6 +340,37 @@
 </xsl:choose>
 </xsl:template>
 
+<xsl:template match="rng:optional">
+  <t>
+    <xsl:comment>AG</xsl:comment>
+    <xsl:text>Optionally:</xsl:text>
+  </t>
+  <ul empty="true">
+    <xsl:comment>AG</xsl:comment>
+    <xsl:apply-templates>
+      <xsl:with-param name="in-list" select="true()"/>
+    </xsl:apply-templates>
+  </ul>
+</xsl:template>
+
+<xsl:template match="rng:value">
+  <xsl:param name="in-list" select="false()"/>
+  <xsl:choose>
+    <xsl:when test="$in-list">
+      <li>
+        <xsl:text>"</xsl:text>
+        <xsl:value-of select="."/>
+        <xsl:text>"</xsl:text>
+      </li>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:text>"</xsl:text>
+      <xsl:value-of select="."/>
+      <xsl:text>"</xsl:text>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
 <xsl:template match="rng:choice">
   <xsl:param name="in-list" select="false()"/>
   <xsl:choose>
